@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="icon" href="icon.png">
+		
+		<title> CowHelp </title>
+	</head>
+<body>
+    <div id="nameAssistant" style="display:none;">CowHelp</div>
+    <div id="letI" style="display:none;"> <span id="SaludoInicial"></span> 🐄</div>
+	<div id="letII" style="display:none;">¿Me recuerdas tu nombre?</div>
+	<div id="letIII" style="display:none;">¿En que te puedo ayudar?</div>
+	<div id="letIII.1" style="display:none;">¿Te gustaría hacer algo mas?</div>
+	<div id="letIV" style="display:none;">Me alegra verte, <!--Cliente--> </div>
+	<div id="letV" style="display:none;">Nuestros métodos de contacto son:</div>
+	<div id="letVI" style="display:none;"> <span >Bien, si me necesitas sabes donde encontrarme. 🐄🛸</span> <br>
+		<img src="./vaca-abducida.gif" alt="vacaAbducidaGIF" width="70%" style="padding-top: 20px;"> </div>
+
+	<div id="letVII" style="display:none;">Entendido, a continuación ingresa los datos de la tarea:</div>
+	<div id="letVIII" style="display:none;">
+		A. Whatsapp <br>
+		B. E-mail
+	</div>
+	<div id="letIX" style="display:none;">Por favor, ingrese su número de Whatsapp</div>
+	<div id="letX" style="display:none;">Por favor, ingrese su E-mail</div>
+	<div id="letXI" style="display:none;">Ingrese su número correctamente, sin letras ni símbolos</div>
+	<div id="letXII" style="display:none;">Ingrese un E-mail válido</div>
+	<div id="letXIII" style="display:none;">¡En breves, un particular se comunicará contigo, <!--Cliente--></div>
+	<div id="letXIV" style="display:none;">¿Por cuál tema te gustaría continuar?</div>
+    <div id="letXV" style="display:none;">
+		<b>A. Crear nuevo evento.</b>  <br>
+		<b>B. Crear nueva tarea.</b>  <br>
+		<b>C. Ayuda.</b>  <br>
+		<b>D. Salir.</b> 
+	</div>
+	<div id="letXVI" style="display:none;">¡Opcion Invalida!</div>
+	<div id="letXVII" style="display:none;">
+		Métodos de estudio:
+		<br>
+		<p>A continuación te presento los links de información relacionada a técnicas de estudio, ¡Para que puedas decidir cuál es la que mejor se adapta a vos!:</p>
+		<br>
+		<a href="https://unibetas.com/tecnicas-de-estudio/" target="_blank"><img src="link.svg">Conoce los mejores 20 métodos de estudio</a>
+		<br>
+		<a href="https://www.idat.edu.pe/blog/12-tecnicas-de-estudio-para-potenciar-tu-aprendizaje" target="_blank"><img src="link.svg">12 técnicas de estudio para potenciar tu aprendizaje</a>
+		<br>
+		<a href="https://lecturaagil.com/tecnicas-de-estudio/" target="_blank"><img src="link.svg">Las 10 Mejores Técnicas de Estudio: Por orden de Efectividad</a>
+	</div>
+	<div id="letXVIII" style="display:none;">
+		Herramientas de estudio:
+		<br>
+		<p>Te recomiendo una técnica para estudiar llamada Pomodoro, un método para mejorar la administración del tiempo dedicado a una actividad:</p>
+		<br>
+		<a href="https://pomodoro-tracker.com" target="_blank"><img src="link.svg">Temporizador de la técnica pomodoro</a>
+	</div>
+	<div id="letXIX" style="display:none;">
+		Motivacion para estudiar:
+		<br>
+		<p>¡Acá podés ver la técnica Pomodoro en acción!</p>
+		<br>
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/qkdUGC-izus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div id="letXX" style="display:none;">
+		Música para concentrarse:
+		<br>
+		<p>¿Te suele pasar que los ruidos no te dejan concentrarte? ¡Podés intentar poniendo estos vídeos de fondo para relajarte con sonidos de lluvia o música Lo-Fi!</p>
+		<br>
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/buqt6_CjtuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br>
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PLFo9gjjUVIrhTWH_-gry8MKJocIkIadCT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Lo-fi de distintos estilos</iframe>
+	</div>
+
+
+
+
+
+
+	<div id="letXXI" style="display:none;">
+		Ingresa el nombre de la tarea. <br>
+		<i>Escribe "volver" para cancelar la creacion de la tarea.</i> 
+	</div>
+	<div id="letXXI.1.a" style="display:none;">
+		Ingresa la hora de inicio (24hs). <br>
+		<i>Escribe "volver" para cancelar la creacion de la tarea.</i> 
+	</div>
+	<div id="letXXI.1.b" style="display:none;">
+		Ingresa los minutos de inicio. <br>
+		<i>Escribe "volver" para cancelar la creacion de la tarea.</i> 
+	</div>
+	<div id="letXXI.1.c" style="display:none;">
+		Selecciona la duracion de la tarea. <br>
+		<b>A. 5 minutos. </b><br>
+		<b>B. 15 minutos.</b><br>
+		<b>C. 30 Minutos.</b><br>
+		<b>D. 45 minutos.</b><br>
+		<b>E. 60 minutos.</b><br>
+		<i>Escribe "volver" para cancelar la creacion de la tarea.</i> 
+	</div>
+	<div id="letXXI.2" style="display:none;">
+		Entendido, anoté la tarea: <b><span id="Tarea"></span></b>, a las <b><span id="HoraTarea"></span></b><b>:</b><b><span id="MinutosTarea"></span></b>, con una duracion de <b><span id="DuracionTarea"></span></b> minutos.
+	</div>
+	<div id="letXXI.3" style="display:none;">Oy, oy. Lo siento muuucho, mi cerebrito vacuno se llenó, no podre almacenar mas tareas por ahora :(</div>
+	<div id="letXXI.4" style="display:none;">¡Cancelando tarea!</div>
+
+
+
+
+
+
+
+
+
+	<div id="letXXII" style="display:none;">
+		Ingresa el nombre del evento. <br>
+		<i>Escribe "volver" para cancelar la creacion del evento.</i> 
+	</div>
+	<div id="letXXII.1" style="display:none;">Ingresa la hora de inicio (24hs).<br> 		
+		<i>Escribe "volver" para cancelar la creacion del evento.</i>
+	</div>
+	<div id="letXXII.1.a" style="display:none;">Ingresa los minutos de inicio. <br>
+		<i>Escribe "volver" para cancelar la creacion del evento.</i> 
+	</div>
+	<div id="letXXII.2.a" style="display:none;">Anotado, añadí el evento: <b><span id="Evento"></span></b>, a las: <b><span id="HoraEvento"></span></b><b>:</b><b><span id="MinutosEvento"></span></b> horas.</div>
+	<div id="letXXII.3" style="display:none;">Oy, oy. Lo siento muuucho, mi cerebrito vacuno se llenó, no podre almacenar mas eventos por ahora :(</div>
+	<div id="letXXII.4" style="display:none;">¡Evento cancelado!</div>
+
+
+
+	<!--<div id="letXXIII" style="display:none;">Nuestras Materias para Particulares son:</div>-->
+	<div id="letMail" style="display:none;">EduBoti@gmail.com</div>
+    
+
+	
+	<div id="letXXIV" style="display:none;">Es hora de hacer tu tarea: <b><span id="NombreTarea"></span></b>. Se bloquearán las
+	notificaciones de tu dispositivo para evitar interrupciones ¡En marcha! Duracion de la sesión: <b><span id="MinutosRestantes"></span></b><b> minutos.</b></div>
+	<div id="letXXIV.1.a" style="display:none;">Muuucho trabajo ¿no? Tomate un descansito.</div>
+	<div id="letXXIV.1.b" style="display:none;">Se acabó el descanso, volvemos al trabajo. ¡Animo, te falta poco!</div>
+	<div id="letXXIV.2" style="display:none;">¡Tiempo de tarea finalizado!</div>
+
+
+
+
+	<div id="letXXV" style="display:none;">¿Qué tal te fue con tu tarea? Si pudiste completarla escribe <b>completada</b>, en cambio
+	si no lograste completarla escribe <b>incompleta</b>. Por favor se honesto contigo mismo.</div>
+	
+	<div id="letXXV.1" style="display:none;">¡Eso es genial, muuuy bien hecho! Te ganaste
+	<b><span id="PalmerasTareaRecompensa"></span></b> palmeras 🌴. Tienes en total: <b><span id="TotalPalmeras"></span></b>🌴.</div>
+
+	<div id="letXXV.2" style="display:none;"> ¿Podrías indicarme la razón?: <br>
+	<b>A. No me alcanzo el tiempo.</b> <br>
+	<b>B. Me distraje mucho.</b> <br>
+	<b>C. Me costó realizarla.</b> <br>
+	<b>D. No tenía animos/me frustré.</b> <br>
+	<b>E. Me dió pereza.</b> <br>
+	<b>F. Otro.</b> <br>
+	</div>
+
+	<div id="letXXV.3.a" style="display:none;">Si no te alcanzó el tiempo que configuraste la proxima prueba con mas. Pero si te refieres
+	a un problema de horarios, te recomiendo que le eches un vistazo a tus tiempos y pruebes otra organización. En internet existen muchos
+	metodos y consejos para organizarte. En el apartado <b>Ayuda</b> encontrarás mas información.</div>
+
+
+	<div id="letXXV.3.b" style="display:none;">Si te distraes mucho, podrías empezar por identificar la causa del porqué. Mientras haces
+	una tarea yo procuro bloquear las distracciones que vienen de tu dispositivo. Algo que te puede servir es definir tus prioridades y
+	enfocar tu mente en lo que estas haciendo para ser eficiente. Si realizas otras tareas al mismo tiempo que tu tarea 'principal', te distraeras y no darás
+	tu 100% en ello.</div>
+	<div id="letXXV.3.b.i" style="display:none;">También el entorno influye, si estas en un entorno con el cual no estas a gusto, es incomodo,
+	hay mucho ruido, o no es agradable, esto te dispersara también. Procura tener un espacio organizado y un ambiente agradable con el cual
+	te puedas concentrar. Como siempre podrás encontrar metodos en internet que te ayuden con esto, ya sea musica para concentrarte, consejos
+	de otras personas y demás. En el apartado <b>Ayuda</b> encontrarás mas información.</div>
+
+
+	<div id="letXXV.3.c" style="display:none;">¡No te desanimes! Aunque hayan cosas que parezcan imposibles de realizar, con perseverancia,
+	y dedicación verás que no eran tan imposibles como pensabas. Si tienes una tarea muy grande, puedes descomponerla en pequeñas partes, así
+	poco a poco avanzas con pequeñas cosas, evitando que te abrumes. Estudia y averigua mas sobre lo que estas haciendo, investiga y
+	aprende mas. En el apartado <b>Ayuda</b> hay cosas que pueden ser útiles. </div>
+
+
+	<div id="letXXV.3.d" style="display:none;">Si no tienes animos al realizar una tarea suele ser mejor esperar a cuando tengas animos, ya que
+	de lo contrario no la realizaras con eficiencia, además de sentirse una tortura. Si te frustras por algo que no te salga o un problema el
+	cual no puedas resolver, pospone la tarea y haz otra cosa, esto suele servir mucho ya que despues al retomar la actividad encontrarás una 
+	solución, esto también aplica para las ganas de hacer la tarea, si estas mucho tiempo haciendola sin tomarte descansos lo mas probable es
+	que te frustres. En el apartado <b>Ayuda</b> encontrarás mas información.
+	</div>
+
+	<div id="letXXV.3.e" style="display:none;">Esto suele ir ligado al problema de la procrastinación. En el apartado <b>Ayuda</b> encontrarás
+	un apartado sobre el tema el cual se explica muy bien, incluyendo metodos para contrarrestar.
+	</div>
+
+	<div id="letXXV.3.f" style="display:none;">Si tienes alguna duda o problema puedes pedirme ayuda. Cuenta con ello. </div>
+
+
+
+
+
+	<div id="letXXVI" style="display:none;">¿En que necesitas ayuda?</div>
+
+	<div id="letXXVI.1" style="display:none;">
+	<b>A. Ayuda con la procrastinación.</b> <br>
+	<b>B. Ayuda con estres.</b> <br>
+	<b>C. Especialistas no vacunos.</b> <br>
+	<b>D. Acerca de CowHelp.</b> <br>
+	</div>
+
+
+
+
+	<div id="letXXVI.1.a" style="display:none;">Procrastinar consiste en posponer deliberadamente tareas importantes pendientes, a pesar
+	de tener la oportunidad de llevarlas a cabo (se tiene el tiempo y la ocasión). <br>
+
+	<b>Las consecuencias son:</b> <br>
+  	Aumento del estres por acumulación de trabajo. <br> 
+	Disminución de la autoeficacia. <br>
+	Sentimiento de culpa por dejarlo para más tarde. <br>
+	Sensación de pérdida de tiempo. <br>
+
+	<b>¿Qué puedo hacer?</b> <br>
+
+	<b>Organización del tiempo:</b>Clarificar las tareas pendientes y priorizarlas para, así, poder organizar el
+	tiempo que se le va a dedicar a cada una. Ponerle fecha y hora mediante un 	calendario o planning puede facilitar la realización de 
+	la tarea.<br>
+
+	<b>La regla de dos minutos:</b>Si existe algo que puedas hacer en los próximos dos, cinco o diez minutos, es preferible que la hagas en
+	lugar de planificarla. Esto se debe a que se tarda más en planificar que en realizarla y, además, disminuiremos la cantidad de pequeñas 
+	tareas 	pendientes.<br>
+
+	<b>Disminuir distracciones:</b>Durante el tiempo que estemos realizando las tareas, disminuir la posibilidad de distracciones. 
+	Esto significa, no tener el móvil a mano, tener la televisión apagada, cuidar las condiciones ambientales para poder desempañar 
+	la tarea cómodamente, etc.<br>
+
+	</div>
+
+
+
+
+	<div id="letXXVI.1.b" style="display:none;">El estrés es un sentimiento de tensión física o emocional. Puede provenir de cualquier 
+	situación o pensamiento que lo haga sentir a uno frustrado, furioso o nervioso. <br>
+	
+	Cuando tiene estrés crónico, su cuerpo se mantiene alerta incluso cuando no hay peligro. Con el tiempo, esto le pone en riesgo de
+	problemas de salud, incluyendo: Presión arterial alta. Insuficiencia cardíaca. <br>
+
+	No siempre puede evitar el estrés en su vida, pero puede aprender a manejarlo mejor.
+	Los Institutos Nacionales de la Salud recomiendan estas medidas: <br>
+
+	<b>Establece prioridades.</b><br>
+	<b>Mantente en contacto con personas que pueden proporcionar apoyo emocional y de otra índole.</b><br>
+	<b>Tómate tiempo para hacer actividades relajantes que disfrutas</b><br>
+	<b>Evita pensar obsesivamente en los problemas.</b><br>
+	<b>Acude a un profesional de la salud emocional.</b><br>
+
+	</div>
+
+
+
+
+	<div id="letXXVI.1.c" style="display:none;"> Desafortunadamente nuestros especialistas vacunos no estan disponibles por el momento, pero
+	igualmente te podré recomendar contenido muy bueno: <br>
+
+	<a href="https://youtu.be/xAYseSOLc1U"><b>Full Perception - Organización del tiempo. Click aquí.</b></a> 
+	<a href="https://youtu.be/haLE81S8c3o"><b>FisioOnline - Combatir estres y ansiedad. Click aquí.</b></a>
+	<a href="https://youtu.be/AccTqvN6XSM"><b>Euge Oller - Truco para dejar de procastrinar. Click aquí.</b></a>
+	<a href="https://youtu.be/n_mtyyVW6tg"><b>Arata Academy SPANISH - Estado de Flow. Click aquí.</b></a>
+	
+	</div>
+
+
+
+
+	<div id="letXXVI.1.d" style="display:none;">
+	<i><b>CowHelp</b> es un proyecto desarrollado por un curso de DW4 de Aprendé Programando como proyecto final, enfocado en el fenomeno /
+	problematica que se volvió muy común: La mala distribución de los tiempos, tanto para realizar actividades cotidianas, como tareas, 
+	estudios, etcétera. <br>
+
+	Vivimos en un mundo conectado a la red, por lo que es normal que nos distraigamos y perdamos la noción del tiempo. Esto es un problema
+	ya que no conseguimos completar nuestros objetivos en tiempo y forma, siempre nos vemos obstaculizados por nuestros dispositivos y no
+	hacemos lo que tenemos que hacer. <br>
+	
+	Todo esto nos lleva a presentar diferentes consecuencias en la vida cotidiana, podemos empezar a sentirnos frustrados tras no completar
+	nuestros objetivos como nos gustaría hacerlo. También nos encontramos un bajo rendimiento tanto académico como laboral, para finalmente
+	perder también el interés en estas tareas, y terminar abandonadolas. <br>
+
+	Por eso, desarrollamos el proyecto Cow Help, el cual es un bot que nos ayudará con la organización de tiempos y a evitar la distracción
+	en las tareas. <br>
+
+	CowHelp incluye: sistema de puntuación por la realización de tareas para que el usuario tenga incentivo de realizar sus tareas, Cow
+	también puede preguntar por nosotros y por nuestra salud cuando no completamos una tarea para que sirva de ayuda y autoanalisis al
+	cliente, ademas de ofrecer contenido, información, metodos y demás para aliviar el estrés y para manejar mejor estas situaciones
+	de desconcentración, gestión de tiempos, estrés, etcétera.
+
+	<b>CowHelp</b> es un bot web que busca brindar un servicio de agenda con preguntas, para ayudar al usuario a organizarse y distribuir mejor
+	su uso diario del tiempo. Así solucionamos la dificultad con la que los usuarios se organizan en el día a día, y les entregamos una
+	herramienta para luchar contra el procrastinar de los dispositivos que nos llaman.
+	
+	</i></div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- input para introducir el texto y el botón para enviar -->
+	<div id="contGral">
+	  	<div id="contAssistant"></div>
+	  	<form id="barTextCliente" method="dialog" action="">
+		    <input type="text" id="readText" placeholder="Muuu..."></input>
+		    <button id="btnReadText" onclick="">Mugir</button>
+		</form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/codigo.js"></script>
+</body>
+</html>
