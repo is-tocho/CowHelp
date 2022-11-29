@@ -4,6 +4,9 @@ let _NOMBRE_CLIENTE; // Almacenara el nombre del usuario
 let palmeras = 0;
 
 console.log(palmeras);
+let gDate = new Date();
+console.log(gDate.getHours());
+console.log(gDate.getMinutes());
 
 
 let eventosSlots = ["null","null","null"];
