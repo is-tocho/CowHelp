@@ -66,7 +66,7 @@ a img {
 	width: 100%;
 	height: 55vh;
 	position: relative;
-	padding-top: 1vh;
+	padding-top: 5vh;
 	overflow: auto;
 	border-radius: 8px 8px 0 0;
 	background: url(../cowhelpbackground.png);
@@ -289,5 +289,37 @@ button {
 	font-size: 15px;
 }
 
-@media (max-height: 550px) and (orientation: landscape)
-{ body {position: relative;} }
+
+@media (max-width: 550px)
+{
+	#contGral {
+		width: 100%;
+		height: 100%;
+	}
+
+	#contAssistant{
+		width: 100%;
+		height: 86%;
+	}
+
+	body {
+		font-size: 140%;
+	}
+
+	#btnReadText {
+		font-size: 80%;
+	}
+
+	#readText {
+		font-size: 110%;
+	}
+
+	#discon {
+		font-size: 80%;
+	}
+
+	#textAssisWrite {
+		font-size: 80%;
+	}
+
+}

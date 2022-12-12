@@ -10,16 +10,16 @@ console.log(gDate.getMinutes());
 
 
 let eventosSlots = ["null","null","null"];
-let horaEventosSlots = [00,00,00];
-let minutosEventosSlots = [00,00,00];
+let horaEventosSlots = [99,99,99];
+let minutosEventosSlots = [99,99,99];
 let lastEventosSlotsSelector;
 let slotsTaken = false;
 
 
 
 let tareasSlots = ["null", "null"];
-let horaTareasSlots = [00,00];
-let minutosTareasSlots = [00,00];
+let horaTareasSlots = [99,99];
+let minutosTareasSlots = [99,99];
 let duracionTareasSlots = [00,00];
 let duracionTareasMinutosSlots = [00,00]
 let lastTareasSlotsSelector;
@@ -85,22 +85,22 @@ window.setInterval(function(){
     var date = new Date(); 
     if(date.getHours() === parseInt(horaEventosSlots[0]) && date.getMinutes() === parseInt(minutosEventosSlots[0]))
     {
-        horaEventosSlots[0] = 00;
-        minutosEventosSlots[0] = 00;
+        horaEventosSlots[0] = 99;
+        minutosEventosSlots[0] = 99;
         alert(eventosSlots[0]);
         eventosSlots[0] = "null";
     }
     if(date.getHours() === parseInt(horaEventosSlots[1]) && date.getMinutes() === parseInt(minutosEventosSlots[1]))
     {
-        horaEventosSlots[1] = 00;
-        minutosEventosSlots[1] = 00;
+        horaEventosSlots[1] = 99;
+        minutosEventosSlots[1] = 99;
         alert(eventosSlots[1]);
         eventosSlots[1] = "null";
     }
     if(date.getHours() === parseInt(horaEventosSlots[2]) && date.getMinutes() === parseInt(minutosEventosSlots[2]))
     {
-        horaEventosSlots[2] = 00;
-        minutosEventosSlots[2] = 00;
+        horaEventosSlots[2] = 99;
+        minutosEventosSlots[2] = 99;
         alert(eventosSlots[2]);
         eventosSlots[2] = "null";
     }
@@ -160,8 +160,8 @@ window.setInterval(function(){
                     done[0] = false;
                     descansoDado[0] = false;
                     tareasSlots[0] = "null";
-                    horaTareasSlots[0] = 00;
-                    minutosTareasSlots[0] = 00;
+                    horaTareasSlots[0] = 99;
+                    minutosTareasSlots[0] = 99;
                     duracionTareasSlots[0] = 00;
                     duracionTareasMinutosSlots[0] = 00;
 
@@ -230,8 +230,8 @@ if (date.getHours() === parseInt(horaTareasSlots[1]) && date.getMinutes() === pa
                     done[1] = false;
                     descansoDado[1] = false;
                     tareasSlots[1] = "null";
-                    horaTareasSlots[1] = 00;
-                    minutosTareasSlots[1] = 00;
+                    horaTareasSlots[1] = 99;
+                    minutosTareasSlots[1] = 99;
                     duracionTareasSlots[1] = 00;
                     duracionTareasMinutosSlots[1] = 00;
                     escribirMensaje("letXXIV.2", 500, 500);
@@ -649,8 +649,8 @@ const decisionClienteHoraEvento = () => {
                 case 'VOLVER':
                 case 'volver':
                     eventosSlots[lastEventosSlotsSelector] = "null";
-                    horaEventosSlots[lastEventosSlotsSelector] = 00;
-                    minutosEventosSlots[lastEventosSlotsSelector] = 00;
+                    horaEventosSlots[lastEventosSlotsSelector] = 99;
+                    minutosEventosSlots[lastEventosSlotsSelector] = 99;
                     escribirMensaje("letXXII.4", 500, 500);
                     escribirMensaje("letXV", 1500, 750); 
                 return; // Volver al menu 
@@ -658,10 +658,10 @@ const decisionClienteHoraEvento = () => {
                 default: 
                     for (i = 0; i <= horaEventosSlots.length - 1; i++)
                     {
-                        switch (horaEventosSlots[i] === 00)
+                        switch (horaEventosSlots[i] === 99)
                         {
                             case true:
-                                if (optionClient >= 0 && optionClient <= 9) optionClient = "0" + optionClient;
+                                if (optionClient.length <= 1) optionClient = "0" + optionClient;
                                 horaEventosSlots[i] = optionClient;
                                 lastEventosSlotsSelector = i;
                                 console.log(horaEventosSlots[i]);
@@ -692,17 +692,17 @@ const decisionClienteMinutosEvento = () => {
                 case 'VOLVER':
                 case 'volver':
                     eventosSlots[lastEventosSlotsSelector] = "null";
-                    horaEventosSlots[lastEventosSlotsSelector] = 00;
-                    minutosEventosSlots[lastEventosSlotsSelector] = 00;
+                    horaEventosSlots[lastEventosSlotsSelector] = 99;
+                    minutosEventosSlots[lastEventosSlotsSelector] = 99;
                     escribirMensaje("letXXII.4", 500, 500); 
                     escribirMensaje("letXV", 1500, 750);
                 return; // Volver al menu 
                 default: for (i = 0; i <= minutosEventosSlots.length - 1; i++)
                     {
-                        switch (minutosEventosSlots[i] === 00)
+                        switch (minutosEventosSlots[i] === 99)
                         {
                             case true:
-                                if (optionClient >= 0 && optionClient <= 9) optionClient = "0" + optionClient;
+                                if (optionClient.length <= 1) optionClient = "0" + optionClient;
                                 minutosEventosSlots[i] = optionClient;
                                 lastEventosSlotsSelector = i;
                                 console.log(minutosEventosSlots[i]);
@@ -797,17 +797,17 @@ const decisionClienteHoraTarea = () => {
             case 'VOLVER':
             case 'volver':
                 tareasSlots[lastTareasSlotsSelector] = "null";
-                horaTareasSlots[lastTareasSlotsSelector] = 00;
-                minutosTareasSlots[lastTareasSlotsSelector] = 00;
+                horaTareasSlots[lastTareasSlotsSelector] = 99;
+                minutosTareasSlots[lastTareasSlotsSelector] = 99;
                 duracionTareasSlots[lastTareasSlotsSelector] = 00;
                 duracionTareasMinutosSlots[lastTareasSlotsSelector] = 00;
                 escribirMensaje("letXXI.4", 500, 500); escribirMensaje("letXV", 1500, 750); return; // Volver al menu 
             default: for (i = 0; i <= horaTareasSlots.length - 1; i++)
                 {
-                    switch (horaTareasSlots[i] === 00)
+                    switch (horaTareasSlots[i] === 99)
                     {
                         case true:
-                            if (optionClient >= 0 && optionClient <= 9) optionClient = "0" + optionClient;
+                            if (optionClient.length <= 1) optionClient = "0" + optionClient;
                             horaTareasSlots[i] = optionClient;
                             lastTareasSlotsSelector = i;
                             console.log(horaTareasSlots[i]);
@@ -838,17 +838,17 @@ const decisionClienteMinutosTarea = () => {
                 case 'VOLVER':
                 case 'volver':
                     tareasSlots[lastTareasSlotsSelector] = "null";
-                    horaTareasSlots[lastTareasSlotsSelector] = 00;
-                    minutosTareasSlots[lastTareasSlotsSelector] = 00;
+                    horaTareasSlots[lastTareasSlotsSelector] = 99;
+                    minutosTareasSlots[lastTareasSlotsSelector] = 99;
                     duracionTareasSlots[lastTareasSlotsSelector] = 00;
                     duracionTareasMinutosSlots[lastTareasSlotsSelector] = 00;
                     escribirMensaje("letXXI.4", 500, 500); escribirMensaje("letXV", 1500, 750); return; // Volver al menu 
                 default: for (i = 0; i <= minutosTareasSlots.length - 1; i++)
                     {
-                        switch (minutosTareasSlots[i] === 00)
+                        switch (minutosTareasSlots[i] === 99)
                         {
                             case true:
-                                if (optionClient >= 0 && optionClient <= 9) optionClient = "0" + optionClient;
+                                if (optionClient.length <= 1) optionClient = "0" + optionClient;
                                 minutosTareasSlots[i] = optionClient;
                                 lastTareasSlotsSelector = i;
                                 console.log(minutosTareasSlots[i]);
@@ -959,8 +959,8 @@ const decisionClienteDuracionTarea = () => {
             case 'volver':
                 msjCliente(optionClient); // Se imprime el mensaje del usuario
                 tareasSlots[lastTareasSlotsSelector] = "null";
-                horaTareasSlots[lastTareasSlotsSelector] = 00;
-                minutosTareasSlots[lastTareasSlotsSelector] = 00;
+                horaTareasSlots[lastTareasSlotsSelector] = 99;
+                minutosTareasSlots[lastTareasSlotsSelector] = 99;
                 sduracionTareasSlots[lastTareasSlotsSelector] = 00;
                 duracionTareasMinutosSlots[lastTareasSlotsSelector] = 00;
                 escribirMensaje("letXXI.4", 500, 500); escribirMensaje("letXV", 1500, 750); return; // Volver al menu 
